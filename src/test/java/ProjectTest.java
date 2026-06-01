@@ -15,7 +15,7 @@ public class ProjectTest extends BaseTest {
     @Description("Проверка создания проекта")
     public void checkCreateProject() {
         loginPage.login(user, password)
-                .createNewProject("LA_TEST1", "LA_TEST1");
+                .createNewProject("TEST1", "TEST1");
         String newProjectName = $("#project-name").getValue();
         projectsListPage.clickCreateProject()
                 .getProjectName();
@@ -29,7 +29,7 @@ public class ProjectTest extends BaseTest {
     public void deleteProject() {
         loginPage.login(user, password)
                 .isPageOpened();
-        projectsListPage.deleteProject("LA_TEST1");
+        projectsListPage.deleteProject("TEST1");
     }
 
     @Test(testName = "Проверка создания и удаления нового проекта")
